@@ -1,7 +1,8 @@
 # parking_lot
 The project implements a parking system.
 The project has been developed using c++. In order to execute the project in Ubuntu follow the below steps
-1. Execute the command ./setup.sh : This command will compile the code and resolve all the dependencies and will create the executable file "parking_lot"
+1. Execute g++ -o parking_lot main.cpp
+2. Or you can directly execute the command ./setup.sh : This command will compile the code and resolve all the dependencies and will create the executable file "parking_lot"
 
 
 Now you are ready to run the program. 
