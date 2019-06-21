@@ -91,7 +91,7 @@ void Print_Status()
     const char separator    = ' ';
     cout << left << setw(slot_width) << setfill(separator) << "Slot No. ";
     cout << left << setw(reg_num_width) << setfill(separator) << "Registration No";
-    cout << left << setw(color_width) << setfill(separator) << "Colour";
+    cout << left << setw(color_width) << setfill(separator) << "Color";
     cout<<endl;
 
     for(ll slot=1;slot<=global_parking_size;slot++)
@@ -115,7 +115,7 @@ void Print_Reg_With_Same_Col(string col)
     vector< Parking_Slot > parking_slots=color_to_parking_map[col];
 
     if(parking_slots.size()==0)
-        cout<<"No vehicles parked with the given colour"<<endl;
+        cout<<"No vehicles parked with the given color"<<endl;
     else
     {
         cout<<parking_slots[0].vehicle_details.registration_number;
@@ -132,7 +132,7 @@ void Print_Slot_With_Same_Col(string col)
     vector< Parking_Slot > parking_slots=color_to_parking_map[col];
 
     if(parking_slots.size()==0)
-        cout<<"No vehicles parked with the given colour"<<endl;
+        cout<<"No vehicles parked with the given color"<<endl;
     else
     {
         cout<<parking_slots[0].slot_number;
@@ -210,8 +210,8 @@ void Process_Read_Command()
         }
         case park:
         {
-            reg_num_width=max(reg_num_width,(ll)global_vehicle_obj.registration_number.length());
-            color_width=max(color_width, (ll)global_vehicle_obj.color.length());
+            reg_num_width=max(reg_num_width,(ll)global_vehicle_obj.registration_number.length()+1);
+            color_width=max(color_width, (ll)global_vehicle_obj.color.length()+1);
 
             ll slot_num_parked=Park_Vehicle(global_vehicle_obj);
             if(slot_num_parked==-1)
