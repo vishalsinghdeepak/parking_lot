@@ -29,13 +29,13 @@ string input_string()
 {
     string source;
     cin>>source;
-    transform(source.begin(), source.end(), source.begin(), ::tolower);
+    //transform(source.begin(), source.end(), source.begin(), ::tolower);
     return trim(source);
 }
 
 string format_string(string source)
 {
-    transform(source.begin(), source.end(), source.begin(), ::tolower);
+    //transform(source.begin(), source.end(), source.begin(), ::tolower);
     return trim(source);
 }
 
