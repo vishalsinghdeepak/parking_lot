@@ -9,7 +9,7 @@
 #include <limits.h>
 #include <map>
 #include <queue>
-typedef unsigned long long int ll;
+typedef long long int ll;
 using namespace::std;
 struct Vehicle
 {

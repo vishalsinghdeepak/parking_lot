@@ -8,7 +8,7 @@
 #include <iostream>
 #include <algorithm>
 using namespace::std;
-typedef unsigned long long int ll;
+typedef long long int ll;
 std::string trim_left(const std::string& str)
 {
     const std::string pattern = " \f\n\r\t\v";

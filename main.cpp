@@ -2,7 +2,7 @@
 #include "File_mode.h"
 #include "Console_mode.h"
 using namespace std;
-typedef unsigned long long int ll;
+typedef long long int ll;
 
 int main(int argc, char** argv) {
     if(argc>1)

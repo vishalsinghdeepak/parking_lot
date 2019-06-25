@@ -88,12 +88,13 @@ ll Clear_Slot(ll slot_num)
 
 void Print_Status()
 {
-    const char separator    = ' ';
-    cout << left << setw(slot_width) << setfill(separator) << "Slot No. ";
+   const char separator    = ' ';
+/*    cout << left << setw(slot_width) << setfill(separator) << "Slot No. ";
     cout << left << setw(reg_num_width) << setfill(separator) << "Registration No";
     cout << left << setw(color_width) << setfill(separator) << "Color";
     cout<<endl;
-
+*/
+    cout<<"Slot No. Registration No Colour"<<endl;
     for(ll slot=1;slot<=global_parking_size;slot++)
     {
         if(slot_occupied[slot])
@@ -101,9 +102,9 @@ void Print_Status()
             Vehicle vehicle_obj=slot_to_vehicle_map[slot];
             string reg_num=vehicle_obj.registration_number;
             string color=vehicle_obj.color;
-            cout << left << setw(slot_width) << setfill(separator) << slot;
-            cout << left << setw(reg_num_width) << setfill(separator) << reg_num;
-            cout << left << setw(color_width) << setfill(separator) <<color;
+            cout << left << setw(9) << setfill(separator) << slot;
+            cout << left << setw(16) << setfill(separator) << reg_num;
+            cout << left << setw(6) << setfill(separator) <<color;
             cout<<endl;
         }
     }

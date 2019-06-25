@@ -15,7 +15,7 @@ void Console_Mode()
     {
         global_command_name=input_string();
         Identify_Command_Type();
-
+	if(global_command_type!=invalid_commmad) {
         if(global_command_type==Exit)
             break;
 
@@ -24,6 +24,7 @@ void Console_Mode()
             cout<<"No Parking created. Please create the parking first"<<endl;
             continue;
         }
+	}
 
 
         //Reading required inputs for the command types

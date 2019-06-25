@@ -34,15 +34,17 @@ bool Process_File_Read_Request(vector< string > params)
     global_command_name=format_string(params[0]);
 
     Identify_Command_Type();
-
-    if(global_command_type==Exit)
+	
+    if(global_command_type!=invalid_commmad) {
+        if(global_command_type==Exit)
         return false;
-    if(global_parking_size==0 && global_command_type!=create_parking_lot)
-    {
-        cout<<"No Parking created. Please create the parking first"<<endl;
-        return true;
+   	 if(global_parking_size==0 && global_command_type!=create_parking_lot)
+    	{
+       	 	 cout<<"No Parking created. Please create the parking first"<<endl;
+       	 	return true;
+    	}
     }
-
+    
     bool invalid_params=false;
     //Reading required inputs for the command types
     switch(global_command_type)
